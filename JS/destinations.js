@@ -98,10 +98,8 @@ document.addEventListener("DOMContentLoaded", async function() {
     input.addEventListener('keydown', function(event) {
      
 
-      if (event.key === "Enter" || event.keyCode === 13) {
-        
-        console.log('Enter key was pressed.');
-
+    
+      input.addEventListener('blur', function(event) {
         var search = document.getElementById('dest-search').value;
         search = search.toLowerCase();
         let dest_name = document.getElementsByClassName('destination-name')
@@ -114,8 +112,7 @@ document.addEventListener("DOMContentLoaded", async function() {
                 package_crd[i].style.display ='block'
             }
         }
-      }
-    
+      });
     });
   });
 
